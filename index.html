@@ -1,228 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Axonas'24</title>
-    <style>
-        /* General Styles */
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: transparent;
-            color: #fff;
-            overflow-x: hidden;
-            font-family: Arial, sans-serif;
-        }
-
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            background-color: transparent;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        header .logo {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #f90;
-        }
-
-        .hero {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            min-height: 100vh;
-            background-size: cover;
-            background-position: center;
-            animation: fadeBackground 20s infinite;
-            padding-top: 60px;
-            position: relative;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%; 
-            background-size: cover;
-            background-position: center;
-            opacity: 1;
-            animation: fadeBackground 20s infinite;
-            z-index: -1;
-        }
-
-        .hero h1 {
-            font-family: "Arial", serif;
-            font-style: Bold;
-            font-size: 8em;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            margin: 0;
-            animation: fadeIn 3s ease-in-out;
-        }
-
-        .hero p {
-            font-size: 2em;
-            font-family: "Bebas Neue", serif;
-            font-weight: 400;
-            font-style: normal;
-            margin-top: 10px;
-            animation: fadeIn 3s ease-in-out;
-            letter-spacing: 1.5px;
-        }
-
-        .ticket-prices {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            background-color: #232323;
-            margin: 30px auto;
-            width: 90%;
-            max-width: 290px;
-            border-radius: 40px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
-        }
-
-        .ticket-prices h3 {
-            margin-bottom: 20px;
-            color: #ff7300;
-            font-size: 2em;
-            font-weight: bold;
-        }
-
-        .ticket-prices ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            width: 100%;
-        }
-
-        .ticket-prices ul li {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px 0;
-            border-bottom: 1px solid #444;
-            color: #fff;
-        }
-
-        .ticket-prices ul li:last-child {
-            border-bottom: none;
-        }
-
-        .ticket-prices span {
-            font-weight: bold;
-            color: #ff7300;
-        }
-
-        .ticket-prices button {
-            margin-top: 20px;
-            background-color: #ff7300;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1em;
-            cursor: pointer;
-            border-radius: 10px;
-            transition: background-color 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 115, 0, 0.7);
-        }
-
-            .ticket-prices button:hover {
-            background-color: #e56600;
-            transform: scale(1.1);
-        }
-
-        @keyframes fadeBackground {
-            0% {
-                background-image: url('https://res.cloudinary.com/dvw2c63jn/image/upload/v1735410866/431240090_715952134050612_8259941798217292798_n_aq6hbh.jpg');
-            }
-            25% {
-                background-image: url('https://res.cloudinary.com/dvw2c63jn/image/upload/v1735410867/431121790_715955740716918_7621606397775623768_n_gnjjcw.jpg');
-            }
-            50% {
-                background-image: url('https://res.cloudinary.com/dvw2c63jn/image/upload/v1735410867/278234875_1120760835428279_3346300738718263902_n_p4v4fv.jpg');
-            }
-            75% {
-                background-image: url('https://res.cloudinary.com/dvw2c63jn/image/upload/v1735410867/278248251_1120777668759929_4639693696243626651_n_v4hst3.jpg');
-            }
-            100% {
-                background-image: url('https://res.cloudinary.com/dvw2c63jn/image/upload/v1735410867/278191412_1120777848759911_8737772976111346621_n_m1hm2i.jpg');
-            }
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        /* Responsive Styles for Mobile Devices */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 4em;
-            }
-
-            .hero p {
-                font-size: 1.2em;
-            }
-
-            .ticket-prices {
-                width: 95%;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2.5em;
-            }
-
-            .hero p {
-                font-size: 1em;
-            }
-
-            .ticket-prices h3 {
-                font-size: 1.5em;
-            }
-        }
-
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-        
-        @import url('https://fonts.cdnfonts.com/css/black-mustang');
-    </style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pepsi Themed Card</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <section class="hero">
-        <h1>Axonas'24</h1>
-        <p>2024 AL Batch Proudly Presents</p>
-    </section>
-    <div style="left:0; width:100%; height:50px; position:relative; padding-bottom:0; margin:0 auto"><iframe src="https://www.tickcounter.com/widget/countdown/6350673" style="top:0; left:0; width:100%; height:100%; position:absolute; border:0; overflow:hidden" title="Days for axonas&#x27;24"></iframe></div>
-    
-    <div class="ticket-prices">
-        <h3>Ticket Prices</h3>
-        <ul>
-            <li><span>GIRLS</span><span>2500.00 LKR</span></li>
-            <li><span>GENTLEMEN</span><span>3500.00 LKR</span></li>
-        </ul>
-        <a href="https://axonass.github.io/axonas/" target="_blank">
-            <button>Buy Tickets</button>
-        </a>
+  <div class="card">
+    <div class="circle">
+      <img src="https://res.cloudinary.com/dvw2c63jn/image/upload/v1738061771/pngimg.com_-_cocacola_logo_PNG15_q5mddh.png" alt="Pepsi Logo" class="logo">
     </div>
+    <img src="https://res.cloudinary.com/dvw2c63jn/image/upload/v1738061772/purepng.com-coca-coladrinks-coca-cola-9415246442097gv51_cdtbib.png" alt="Pepsi Can" class="product_img">
+    <div class="content">
+        <h2>Coca Cola</h2>
+        <p>Coca Cola is a cool, refreshing drink that satisfies your thirst and delights your taste buds. Our secret blend of flavors.</p>
+      <a href="#">Shop Now</a>
+    </div>
+  </div>
+<style>
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+* {
+  margin: 10;
+  padding-right: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: black;
+  --clr: #d60e00;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.card:hover {
+  width: 600px;
+  transition-delay: 0.5s;
+}
+
+.card .circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .circle::before {
+  content: "";
+  position: absolute;
+  top: 30;
+  left: 2;
+  right: 2;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: black;
+  border: 8px solid var(--clr);
+  transition: 0.5s, background 0.5s;
+  transition-delay: 0.75s, 1s;
+  filter: drop-shadow(0 0 10px var(--clr)) drop-shadow(0 0 60px var(--clr));
+}
+
+.card:hover .circle::before {
+  transition-delay: 0.5s;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: var(--clr);
+}
+
+.card .circle .logo {
+  position: relative;
+  width: 250px;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.card:hover .circle .logo {
+  transform: scale(0);
+  transition-delay: 0s;
+}
+
+.card .product_img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0) rotate(315deg);
+  height: 300px;
+  transition: 0.5s ease-in-out;
+}
+
+.card:hover .product_img {
+  transition-delay: 0.75s;
+  top: 25%;
+  left: 75%;
+  height: 530px;
+  transform: translate(-50%, -50%) scale(1) rotate(15deg);
+}
+
+.card .content {
+  position: absolute;
+  width: 50%;
+  left: 20%;
+  padding: 20px 20px 20px 20px;
+  opacity: 0;
+  transition: 0.5s;
+  visibility: hidden;
+}
+
+.card:hover .content {
+  transition-delay: 0.75s;
+  opacity: 1;
+  visibility: visible;
+  left: 20px;
+}
+
+.card .content h2 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  line-height: 1em;
+}
+
+.card .content p {
+  color: #fff;
+}
+
+.card .content a {
+  position: relative;
+  color: #d60e00;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+</style>
 </body>
 </html>
